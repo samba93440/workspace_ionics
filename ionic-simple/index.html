@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gestion des coûts</title>
+
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css"/>
+</head>
+<body>
+    
+    <ion-app>
+        <ion-header>
+        <ion-toolbar color = "primary">
+            <ion-title>Liste des course</ion-title>
+
+        </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md = "6" offset-md = 3>
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>
+                                    Mes achats
+                                </ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Désignation</ion-label>
+                                    <ion-input type="text" id="input-design"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Montant</ion-label>
+                                    <ion-input type="text" id="input-montant"></ion-input>
+                                </ion-item>
+                                    <div margin-vertical text-right>
+                                        <ion-button fill="outline" color="danger" id="btn-cancel">
+                                            <ion-icon slot="start" name="close"></ion-icon>
+                                            Effacer
+                                        </ion-button>
+                                        <ion-button id= "btn-confirm">
+                                            <ion-icon slot="start" name="add"></ion-icon>
+                                            Ajouter
+                                        </ion-button>
+                                    </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size-md="6" offset-md = "3">
+                        <ion-list id="listeAchats"></ion-list>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col size="6" offset-md ="3">
+                        <p margin>Total des achats:
+                            <span id="total_achats"></span>
+                        </p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-content>
+        <ion-alert-controller></ion-alert-controller>
+    </ion-app>
+    <script src="app.js"></script>
+</body>
+</html>
